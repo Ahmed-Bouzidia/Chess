@@ -16,7 +16,7 @@ public BoardBuilder() {
 	
 }
 
-public Board buildBoard() {
+public static Board buildBoard() {
 	Board emptyBoard;
 	
 	Palace topPalace = new Palace(PalaceConfig.TOP_SIDE_PALACE_TOP_BORDER,PalaceConfig.TOP_SIDE_PALACE_BOTTOM_BORDER,

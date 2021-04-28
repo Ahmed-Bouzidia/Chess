@@ -1,6 +1,6 @@
 package test;
 
-import board.*;
+import engine.board.*;
 import config.*;
 
 public class Test {

@@ -63,5 +63,21 @@ public String toString() {
 	}
 	return results;
 }
-
+	
+	public  int getTopBorderLineIndex() {
+		return topBorderLineIndex;
+	}
+	
+	public  int getBottomBorderLineIndex() {
+		return  bottomBorderLineIndex;
+	}
+	
+	public  int getLeftBorderColumnIndex(){
+		return leftBorderColumnIndex;
+	}
+	
+	public  int getRightBorderColumnIndex(){ 
+		return rightBorderColumnIndex;
+	}
 }
+

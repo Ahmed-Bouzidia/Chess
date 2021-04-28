@@ -1,5 +1,7 @@
 package engine.board;
 
+import engine.board.Block;
+
 /**
  * The main class of the game
  * All elements of this package are added to this element
@@ -65,5 +67,22 @@ public Side getTopSide() {
 }
 public Side getBottomSide() {
 	return this.bottomSide;
+}
+public Block getBlock(int line,int column) {
+	return blocks[line][column];
+}
+
+public int  getLineCount() {
+	return this.lineCount;
+}
+
+public int getColumnCount() {
+	return this.columnCount;
+}
+public Block[][] getBlocks(){
+	return this.blocks;
+}
+public River getRiver() {
+	return this.river;
 }
 }

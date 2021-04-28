@@ -35,4 +35,7 @@ public class River {
 		int blockLineIndex = block.getLine();
 		return (blockLineIndex == this.riverLineIndex); 
 	}
+	public int getRiverLineIndex() {
+		return riverLineIndex;
+	}
 }

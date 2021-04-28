@@ -58,4 +58,7 @@ public abstract class Piece {
 	public void setMovementArea(MovementArea movementArea) {
 		this.movementArea=movementArea;
 	}
+	public String getColor() {
+		return this.color;
+	}
 }

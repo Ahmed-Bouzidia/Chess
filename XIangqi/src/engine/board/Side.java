@@ -98,4 +98,20 @@ public Boolean isOnPalace(Block block) {
 	
 	return palace.isOnPalace(block);
 }
+
+public int getTopBorderLineIndex() {
+	return this.topBorderLineIndex;
+}
+
+public int getBottomBorderLineIndex() {
+	return this.bottomBorderLineIndex;
+}
+
+public int getLeftBorderColumnIndex() {
+	return this.leftBorderColumnIndex;
+}
+
+public int getRightBorderColumnIndex() {
+	return this.rightBorderColumnIndex; 
+}
 }
