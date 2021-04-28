@@ -34,7 +34,8 @@ public class Test {
 		System.out.println("\n is on bottom side?" + board.isOnBottomSide(block));
 		System.out.println("\n is on river?" + board.isOnRiver(block));
 		System.out.println("\n is on bottom palace?" + board.isOnBottomPalace(block));
-		System.out.println("\\n is on top palace?" + board.isOnTopPalace(block));
+		System.out.println("\\Pieces color?" + board.getBottomSide().getPiecesColor());
+		System.out.println("\\Pieces color?" + board.getTopSide().getPiecesColor());
 	}
 
 }
