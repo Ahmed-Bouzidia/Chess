@@ -1,0 +1,55 @@
+								Type de choses:
+Dans tous ce qui suit,on considère le systeme de java.Graphics
+
+Block: 
+	Classe qui represente une case de plateau,une position
+	Un objet de la classe block a deux attributs: line et colones de type int 
+
+Plateau:
+ 	Plateau de jeux principale,il est composé de 13 linges et 11 colones,ie il est composé de (13*11) cases(Block).
+        Composé d'une rivière et deux palais symetrique par rapport à la rivière
+
+                
+Palais:
+	  zone: en comptant de bas, de la ligne 1 à la ligne 4
+          en partant de gauche, de la colonne 4 à la colonne 8
+	  zone est un attribut de type List"interface" qui vas contenir un ensemble de cases(Block)
+Rivière:
+	c'est un axe de symetrie,il sépare le plateau en deux partie.
+	position:List<Block> 
+	positon : sur toutes les cases(Block) de la line 7 on comptant de bas
+
+
+Piece: Classe qui represente une pièce, on définis dans le programme 32 instances
+Piece a:
+	 un nom :
+	 une couleur:Red/Black
+         une postion: la postion peut changer à chaque round
+         movementZone:la zone ou la pièce peut se déplacer,zonne des movements autorisées
+         
+Types de pièces :  
+	Elephant:
+		 un nom :Elephant
+		 une couleur:Player.COLOR(RED/BLACK)
+		 une postion: la postion peut changer à chaque round
+		 movementZone:dans le tout Plateau,Diagonales libres
+		 
+        General :
+		 un nom :General
+		 une couleur: Player.COLOR(RED/BLACK)
+		 une postion: la postion peut changer à chaque round
+		 movementZone:Dans le tout Plateau ,un seul fois par round, horizontalement ou verticalement
+	Garde:   on a deux garde par joueur 
+		 un nom :Garde
+		 une couleur:Player.COLOR(RED/BLACK)
+		 une postion: la postion peut changer à chaque round,
+		 movementZone:Palais
+
+
+
+Player : classe qui represente un joueur, on définis dans le programme 2 instance(2 joueurs)
+----> Player a : 
+	un nom 
+	une couleur
+
+

@@ -1,14 +1,9 @@
-package builder;
+package engine.process.builders;
 
-import board.Board;
-import board.Palace;
-import board.River;
-import board.Side;
-import config.BoardConfig;
-import config.PalaceConfig;
-import config.SideConfig;
+import engine.board.*;
+import config.*;
 
-/**
+ /**
  * This class creates an empy gameboard without pieces
  * It use the build pattern
  * All parameters nedded in the compilation  are extracted from the config package

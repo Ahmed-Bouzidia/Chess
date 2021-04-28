@@ -1,4 +1,4 @@
-package board;
+package engine.board;
 
 /**
  * This class represents a palace

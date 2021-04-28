@@ -1,4 +1,4 @@
-package board;
+package engine.board;
 
 /**
  * Class that represents one side of the game board

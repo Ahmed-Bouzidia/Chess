@@ -1,4 +1,4 @@
-package board;
+package engine.board;
 
 /**
  * River divide the board game on into parts

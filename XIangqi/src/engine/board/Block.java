@@ -1,4 +1,4 @@
-package board;
+package engine.board;
 
 public class Block {
 	/**

@@ -1,4 +1,4 @@
-package board;
+package engine.board;
 
 /**
  * The main class of the game
@@ -59,5 +59,11 @@ public Boolean isOnTopPalace(Block block) {
 public Boolean isOnBottomPalace(Block block) {
 	Palace palace= this.bottomSide.getPalace();
 	return palace.isOnPalace(block);	
+}
+public Side getTopSide() {
+	return this.topSide;
+}
+public Side getBottomSide() {
+	return this.bottomSide;
 }
 }
