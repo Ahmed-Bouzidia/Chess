@@ -1,5 +1,7 @@
 package engine.board;
 
+import engine.pieces.Piece;
+
 public class Block {
 	/**
 	 *Class that represents a Block(case) its the main element of the board game 
@@ -26,4 +28,21 @@ public class Block {
 	public String toString() {
 		return "Block [line=" + line + ", column=" + column + "]";
 	}
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		} else if (obj != null) {
+			if (obj instanceof Block) {
+				Block block = (Block) obj;
+				//Two contacts are equal when they have the same name, number and email.
+				
+					if (block.getColumn() == column && block.getLine() == line) {
+						return true;
+					}
+				}
+			
+		}
+		return false;
+	}
+
 }

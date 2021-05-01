@@ -95,11 +95,12 @@ public class GameGUI extends JFrame implements Runnable{
 	
 	private class MouseControls implements MouseListener {
 
-		
+		Piece currentPiece;
 		@Override
 		//java Graphics ça marche avec les pixels,
 		public void mouseClicked(MouseEvent e) {
-			int x = (e.getX() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le x par rapport au JPanel
+			/*
+			 int x = (e.getX() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le x par rapport au JPanel
 			
 			int y = (e.getY() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le y par rapport au JPanel
 
@@ -129,16 +130,59 @@ public class GameGUI extends JFrame implements Runnable{
 		    modificationOccured = true;
 			Thread thread = new Thread(instance);
 			thread.start();
+		*/
 		}
 
 		@Override
 		public void mousePressed(MouseEvent e) {
+			int x = (e.getX() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le x par rapport au JPanel
 			
+			int y = (e.getY() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le y par rapport au JPanel
+
+			
+			int clickedLine=y; 
+			int clickedColumn=x;
+			
+			Block currentBlock = board.getBlock(clickedLine, clickedColumn);
+			
+			//Piece currentPiece = PiecesManager.piecesRepository.getPiece(currentBlock);
+			RedPiecesRepository reposit = RedPiecesRepository.getInstance();
+
+			 currentPiece = reposit.getPiece(currentBlock);
+			/*
+			 * 
+			 
+			Block newPos = new Block(clickedLine, clickedColumn + 1);
+			
+			reposit.setPosition(currentPiece, newPos);
+			//reposit.setPosition(, newPos);   
+			//manager.moveRightRoi(currentPiece, newPos);
+	        //manager.moveRightRoi(currentPiece,board.getBlock(clickedLine, clickedColumn +1));
+	        
+			String name = currentPiece.getName();
+  			
+			playerTop.setName(name);
+		
+		*/
 		}
 
 		@Override
 		public void mouseReleased(MouseEvent e) {
-
+			int x = (e.getX() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le x par rapport au JPanel
+			
+			 int y = (e.getY() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le y par rapport au JPanel
+			int clickedLine=y; 
+			 int clickedColumn=x;
+			
+			Block newPos = new Block(clickedLine, clickedColumn );
+			
+			RedPiecesRepository reposit = RedPiecesRepository.getInstance();
+			
+			reposit.setPosition(currentPiece, newPos);
+			
+			modificationOccured = true;
+			Thread thread = new Thread(instance);
+			thread.start();
 		}
 
 		@Override
@@ -159,7 +203,8 @@ public class GameGUI extends JFrame implements Runnable{
 			} catch (InterruptedException e) {
 				System.out.println(e.getMessage());
 			}
-			 dashboard.repaint();   
+			 dashboard.repaint(); 
+			 modificationOccured=false;
 		}
 	}
 		

@@ -13,7 +13,7 @@ public class TestGame {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	//	GameGUI game = new GameGUI("Xiangqi");
-		GameGUI gameMainGUI = new GameGUI("Xiangqi");
+		GameGUI gameMainGUI = new GameGUI("Xiangqi"); 
  
 		//Thread gameThread = new Thread(gameMainGUI);
 		//gameThread.start();

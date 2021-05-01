@@ -61,4 +61,29 @@ public abstract class Piece {
 	public String getColor() {
 		return this.color;
 	}
+	public boolean isEliminated() {
+		return this.eliminated;
+	}
+	
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		} else if (obj != null) {
+			if (obj instanceof Piece) {
+				Piece piece = (Piece) obj;
+				//Two contacts are equal when they have the same name, number and email.
+				if (piece.getName() != null && piece.getBlock() != null
+						&& piece.getColor() != null) {
+					if (piece.getName().equals(name)
+							&& piece.getBlock().equals(position)
+							 ) {
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
+
+	
 }
