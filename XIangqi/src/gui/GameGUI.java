@@ -140,10 +140,10 @@ public class GameGUI extends JFrame implements Runnable{
 			int y = (e.getY() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le y par rapport au JPanel
 
 			
-			int clickedLine=y; 
-			int clickedColumn=x;
+			int pressedLine=y; 
+			int pressedColumn=x;
 			
-			Block currentBlock = board.getBlock(clickedLine, clickedColumn);
+			Block currentBlock = board.getBlock(pressedLine, pressedColumn);
 			
 			//Piece currentPiece = PiecesManager.piecesRepository.getPiece(currentBlock);
 			RedPiecesRepository reposit = RedPiecesRepository.getInstance();
@@ -171,10 +171,10 @@ public class GameGUI extends JFrame implements Runnable{
 			int x = (e.getX() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le x par rapport au JPanel
 			
 			 int y = (e.getY() / 60);//récuperer le pixel sur lequel on a cliqué avec la souris, le y par rapport au JPanel
-			int clickedLine=y; 
-			 int clickedColumn=x;
+			int releasedLine=y; 
+			 int releasedColumn=x;
 			
-			Block newPos = new Block(clickedLine, clickedColumn );
+			Block newPos = new Block(releasedLine, releasedColumn );
 			
 			RedPiecesRepository reposit = RedPiecesRepository.getInstance();
 			
